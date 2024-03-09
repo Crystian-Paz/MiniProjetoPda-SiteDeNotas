@@ -15,6 +15,7 @@ body {
 :root {
     --cor-primaria: white;
     --cor-secundaria: black;
+    --pontilhado-cor: red;
     --font-titulo: 3rem;
     --font-color: black;
     --cor-fundo: #fdfd96;
@@ -46,7 +47,7 @@ header ul {
 
 header ul li {
     margin: 0 3rem;
-    border: 0.09rem dotted red;
+    border: 0.09rem dotted var(--pontilhado-cor);
     border-radius: 0.5rem;
     padding: 0.2rem;
 }
@@ -60,52 +61,67 @@ header ul li p {
 header ul li:hover {
     background-color: var(--cor-fundo);
     border-radius: 0.5rem;
-    border: 0.09rem dotted red;
+    border: 0.09rem dotted var(--pontilhado-cor);
     padding: 0.2rem;
     text-decoration: underline;
-    text-decoration-color: black;
+    text-decoration-color: var(--font-color);
 }
 
 #texto-principal {   
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    display: inline-block;
+    display: block;
     justify-content: center;
     padding-top: 4rem;
 }
 
-.buttom-register {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 6rem;
+.design-buttom {
+    border-bottom-left-radius: 0.5rem solid ;
+    background-image: url();
+    font-size: 1.5rem;  
+    border: 0.2rem dashed var(--pontilhado-cor);
+    color: var(--cor-secundaria);
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+}
+
+.design-buttom:hover {
+    font-size: 1rem;
+}
+
+#texto-principal, .buttom-register {
+    display: block;
+    text-align: center;
+    margin: 3rem auto;
 }
 
 .texto-principal{
     font-size: var(--font-titulo);
     color:var(--font-color);   
+    margin:4rem;
 }
 
 .texto-principal span:hover {
-    background-color: rgb(254, 20, 11);
-    border-radius: 0.5rem;
-}
-
-.texto-secundario span:hover {
-    background-color: rgb(254, 20, 11);
+    background-color: var(--pontilhado-cor);
     border-radius: 0.5rem;
 }
 
 #texto-secundario {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     display: inline-block;
     min-width: 20rem;
     max-width: 50rem;
 }
 
+.texto-secundario span:hover {
+    background-color:var(--pontilhado-cor);
+    border-radius: 0.5rem;
+}
+
 .home-textos {
     text-align: center;
+    flex-direction: row;
 }
 
 footer { 
