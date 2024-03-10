@@ -76,17 +76,23 @@ header ul li:hover {
 }
 
 .design-buttom {
-    border-bottom-left-radius: 0.5rem solid ;
-    background-image: url();
+    background: var(--cor-primaria);
     font-size: 1.5rem;  
-    border: 0.2rem dashed var(--pontilhado-cor);
-    color: var(--cor-secundaria);
+    border: 0px dashed var(--cor-secundaria);
+    border-bottom-width: 0.17rem;
+    border-right-width: 0.15rem;
     border-radius: 0.5rem;
     padding: 0.2rem;
 }
 
 .design-buttom:hover {
-    font-size: 1rem;
+    font-size: 1.55rem;
+
+}
+
+.buttom-register a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
 }
 
 #texto-principal, .buttom-register {
