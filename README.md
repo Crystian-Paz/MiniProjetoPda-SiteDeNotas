@@ -1,1 +1,2 @@
-# MiniProjetoPda-SiteDeNotas
+Mini-Projeto do Módulo 2 do PDA (Programadores do Amanhã)
+Olá! O que você está vendo neste repositório é o mini-projeto do módulo 2 do PDA (Programadores do Amanhã). Por enquanto, o site possui funcionalidades como cadastro, login, adição de notas, alteração e exclusão. Outras funcionalidades, como lixeira, configurações, perfil, notas próprias do usuário, mudança de ícone por meio de link, e algumas outras alterações que estou pensando em fazer, provavelmente irão chegar em um futuro breve. É isso! Até a próxima atualização!
