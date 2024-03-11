@@ -56,4 +56,5 @@ document.getElementById("limpar").addEventListener("click", () => {
     document.getElementById("nascimento").value = "";
     document.getElementById("senha").value = "";
     document.getElementById("confirma-senha").value = "";
+    
 });

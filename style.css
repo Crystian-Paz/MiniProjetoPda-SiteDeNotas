@@ -52,10 +52,11 @@ header ul li {
     padding: 0.2rem;
 }
 
-header ul li p {
+header ul li a {
     font-size: 1.5rem;
     color: var(--cor-secundaria);
     margin: 0;
+
 }
 
 header ul li:hover {
