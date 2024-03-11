@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notas</title>
+    <link rel="shortcut icon" href="../imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/notas.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +33,7 @@
             <img src="../imgs/4123763.png" alt="">
         </div>
         <div class="user-text">
-            <h1>bem vindo $user</h1>
+            <h1>Bem vindo <span id="username"></span></h1>
             <a href="perfil">perfil</a>
         </div>
     </section>
@@ -41,7 +42,7 @@
     <section>
         <div class="texto-principal">
             <h1>
-                Bem vindo as Notas!
+                Bem vindo às Notas!
             </h1>
         </div>
         <div class="texto-secundario">
@@ -55,19 +56,25 @@
     </section>
     <section id="box-note">
         <div class="box-item">
-            <div class="botao">
-                <button>+</button>
-                <button>-</button>
+            <div class="box-conjuntos">
+                <p>Escreva uma nota:</p>
+                <input type="text" nota="nota" id="nota">
+                <button id="enviar-input">Enviar</button>
             </div>
         </div>
+        <div id="lista-nota"></div>
     </section>
     <footer>
         <section>
             <div>
-                <P>Site criado por Crystian Silva</P>
+                <p>Site criado por Crystian Silva</p>
             </div>
         </section>
      </footer>
-     <script src="../js/login.js"></script>
+     <script src="../js/notas.js"></script>
+     <script>
+         const username = localStorage.getItem('username');
+         document.getElementById('username').innerText = username;
+     </script>
 </body>
 </html>

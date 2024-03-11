@@ -1,21 +1,18 @@
 const $ = (elemento) => document.querySelector(elemento);
 
 $("#entrar").addEventListener("click", (ev) => {
-  ev.preventDefault();
+    ev.preventDefault();
 
-  const string = localStorage.getItem("usuario");
-  const usuarioCadastrado = JSON.parse(string);
+    const loginInput = $("#login").value;
+    const senhaInput = $("#senha").value;
 
-  const { login, senha } = usuarioCadastrado;
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const usuarioCadastrado = usuarios.find(usuario => usuario.login === loginInput && usuario.senha === senhaInput);
 
-  const dadosCorretos =
-    login === $("#login").value && senha === $("#senha").value;
-  console.log(dadosCorretos);
+    if (!usuarioCadastrado) {
+        alert("Dados inválidos!");
+        return;
+    }
 
-  if (!dadosCorretos) {
-    alert("Dados inválidos!");
-    return;
-  }
-
-  window.location.href = "./notas.html";
+    window.location.href = "./notas.html";
 });
